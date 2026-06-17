@@ -1,0 +1,405 @@
+﻿<!doctype html>
+<html>
+<head>
+<style>
+body {
+margin: 0;
+height: 100vh;
+background: linear-gradient(45deg, #ff00cc,#3333ff, #00ffee);
+background-size: 400% 400%;
+animation: shine 5s ease infinite;
+}
+@keyframes shine {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+</style>
+<script type="text/javascript">
+function msgSure() {
+alert("THIS WEBSITE IS NOT COMPLETE YET,PLEASE WAIT FOR UPDATES")
+}
+function msgSure() {
+alert("THIS WEBSITE IS NOT COMPLETE YET,PLEASE WAIT FOR UPDATES")
+}
+function msgSure() {
+alert("THIS WEBSITE IS NOT COMPLETE YET,PLEASE WAIT FOR UPDATES")
+}
+</script>
+<style>
+button{
+
+padding:10px 20px;
+font-size:18px;
+background:blue;
+color:white;
+border:none;
+border-radius:10px;
+transition:0.3s;
+}
+
+button:hover{
+
+background:yellow;
+color:black;
+transform:scale(1.1);
+}
+
+</style>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(45deg, #ff00cc,#3333ff,#00ffee);
+  background-size: 400% 400%;
+  animation: shine 5s ease infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* BACKGROUND LAYER */
+#bgLayer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* BUTTON */
+.theme-btn {
+  position: fixed;
+  right: 0;
+  bottom: 90px;
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 12px 0 0 12px;
+  background: #7c3aed;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* POPUP */
+.theme-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #111;
+  padding: 18px;
+  border-radius: 14px;
+  display: none;
+  gap: 10px;
+  width: 340px;
+  flex-wrap: wrap;
+  z-index: 2000;
+}
+
+.theme-popup.show {
+  display: flex;
+}
+
+/* CARDS */
+.theme-card {
+  width: 90px;
+  height: 65px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.theme-card:hover {
+  transform: scale(1.05);
+}
+
+.theme-label {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  font-size: 10px;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+/* EQUIP BUTTON */
+.equip-btn {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #7c3aed;
+  color: white;
+  cursor: pointer;
+}
+</style>
+<style>
+body{
+  margin:0;
+  overflow:hidden;
+  background:#0f172a;
+}
+
+.bg-circles{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  overflow:hidden;
+}
+
+.circle{
+  position:absolute;
+  bottom:-150px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.25);
+  animation:rise 20s linear infinite;
+}
+
+/* different circles */
+.circle:nth-child(1){
+  left:10%;
+  width:60px;
+  height:60px;
+  animation-duration:18s;
+}
+
+.circle:nth-child(2){
+  left:25%;
+  width:90px;
+  height:90px;
+  animation-duration:25s;
+}
+
+.circle:nth-child(3){
+  left:40%;
+  width:50px;
+  height:50px;
+  animation-duration:20s;
+}
+
+.circle:nth-child(4){
+  left:60%;
+  width:120px;
+  height:120px;
+  animation-duration:30s;
+}
+
+.circle:nth-child(5){
+  left:80%;
+  width:70px;
+  height:70px;
+  animation-duration:22s;
+}
+
+/* smooth upward floating */
+@keyframes rise{
+  0%{
+    transform:translateY(0) scale(1);
+    opacity:0;
+  }
+  10%{
+    opacity:0.4;
+  }
+  100%{
+    transform:translateY(-110vh) scale(1.2);
+    opacity:0;
+  }
+}
+</style>
+</head>
+<body>
+<b><p style="
+position:fixed;
+bottom:10px;
+right:0;
+left:0;
+text-align:center;
+font-size:16px;">
+CREATED BY HASHIR HUSSAIN
+</P></b>
+<h2><CENTER> EVERY-COURSE </CENTER></h2>
+<H1><CENTER> IBA PUBLIC SCHOOL SUKKUR </CENTER></H1>
+<div style="text-align:center; margin-top:80px;">
+CLASS:PRE-NINE
+<input type="button" value="OPEN"
+onclick="window.location.href='pre-nine.html'">
+<br><br>
+CLASS:SIX
+<input type="button" value="OPEN"
+onclick="window.location.href='class-six.html'">
+<br><br>
+NOVA AI:
+<input type="button" value="OPEN"
+onclick="window.location.href='nova-aa.HTML'">
+</div>
+<button
+style="
+position: fixed;
+bottom: 20px;
+right: 20px;
+padding: 10px 15px;
+border: none;
+border-radius: 20px;
+cursor: pointer;
+"
+onclick="
+if(document.body.style.background=='black'){
+    document.body.style.background='white';
+    document.body.style.color='black';
+}else{
+    document.body.style.background='black';
+    document.body.style.color='white';
+}
+">
+🌙 Dark Mode
+</button>
+<button onclick="document.getElementById('noteBox').style.display='block'"
+style="
+position: fixed;
+bottom: 20px;
+left: 20px;
+padding: 6px 10px;
+font-size: 12px;
+border: none;
+border-radius: 12px;
+background: #333;
+color: white;
+cursor: pointer;
+box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+">
+📝 Note
+</button>
+
+<div id="noteBox"
+style="
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
+width:250px;
+text-align:center;
+z-index:999;
+">
+
+<p>PRESS REFRESH TO REMOVE ALL EFFECTS OR ANY ERROR</p>
+
+<button onclick="document.getElementById('noteBox').style.display='none'">
+Close
+</button>
+
+</div>
+</div>
+<div id="bgLayer"></div>
+
+<button class="theme-btn" onclick="toggleThemes()">🎨</button>
+
+<div class="theme-popup" id="themePopup">
+
+  <!-- 🌈 YOUR MAIN BACKGROUND -->
+  <div class="theme-card" onclick="setTheme('main')" 
+  style="background:linear-gradient(45deg,#ff00cc,#3333ff,#00ffee)">
+    <div class="theme-label">Main</div>
+  </div>
+
+  <div class="theme-card" onclick="setTheme('space')" 
+  style="background:linear-gradient(135deg,#000428,#004e92)">
+    <div class="theme-label">Space</div>
+  </div>
+
+  <div class="theme-card" onclick="setTheme('ocean')" 
+  style="background:linear-gradient(135deg,#2193b0,#6dd5ed)">
+    <div class="theme-label">Ocean</div>
+  </div>
+
+  <div class="theme-card" onclick="setTheme('sunset')" 
+  style="background:linear-gradient(135deg,#ff512f,#dd2476)">
+    <div class="theme-label">Sunset</div>
+  </div>
+
+  <button class="equip-btn" onclick="equipTheme()">Equip</button>
+</div>
+<script>
+let selectedTheme = null;
+
+const clickSound = new Audio("https://www.soundjay.com/buttons/sounds/button-16.mp3");
+
+function toggleThemes() {
+  document.getElementById("themePopup").classList.toggle("show");
+}
+
+function setTheme(theme) {
+  selectedTheme = theme;
+}
+
+function equipTheme() {
+  if (!selectedTheme) return;
+
+  const bgLayer = document.getElementById("bgLayer");
+
+  // 🌈 MAIN YOUR ORIGINAL BACKGROUND
+  if (selectedTheme === "main") {
+    document.body.style.background = `
+      linear-gradient(45deg,#ff00cc,#3333ff,#00ffee)
+    `;
+    document.body.style.backgroundSize = "400% 400%";
+    document.body.style.animation = "shine 5s ease infinite";
+
+    bgLayer.style.background = "transparent";
+  }
+
+  // 🎨 OTHER THEMES
+  else {
+    const overlays = {
+      space: "rgba(0,0,50,0.3)",
+      ocean: "rgba(0,100,150,0.3)",
+      sunset: "rgba(255,80,0,0.25)"
+    };
+
+    bgLayer.style.background = overlays[selectedTheme];
+    document.body.style.animation = "none";
+  }
+
+  clickSound.currentTime = 0;
+  clickSound.play();
+
+  document.getElementById("themePopup").classList.remove("show");
+
+  localStorage.setItem("selectedTheme", selectedTheme);
+}
+
+window.addEventListener("load", () => {
+  const saved = localStorage.getItem("selectedTheme");
+
+  if (saved) {
+    selectedTheme = saved;
+    equipTheme();
+  }
+});
+</script>
+<div class="bg-circles">
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+</div>
+</body>
+</html>

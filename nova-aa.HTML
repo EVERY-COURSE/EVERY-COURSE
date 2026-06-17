@@ -1,0 +1,234 @@
+﻿<!doctype html>
+<html>
+<head>
+<title>NOVA AI</title>
+
+<style>
+body{
+background: linear-gradient(to right, #4b0082, #1e90ff);
+color:white;
+text-align:center;
+font-family:Arial;
+padding:20px;
+}
+
+input{
+padding:12px;
+width:320px;
+border-radius:10px;
+border:none;
+outline:none;
+}
+
+button{
+padding:10px 15px;
+margin-top:10px;
+border:none;
+border-radius:20px;
+cursor:pointer;
+background:#222;
+color:white;
+}
+
+#box{
+margin-top:20px;
+font-size:18px;
+max-width:750px;
+margin:auto;
+padding:15px;
+white-space:pre-wrap;
+text-align:left;
+background:rgba(0,0,0,0.2);
+border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1><U>NOVA AI </U></h1>
+<p>Class 6 + Pre-9 Smart Study AI</p>
+
+<input type="text" id="question" placeholder="Ask anything...">
+<br>
+
+<button onclick="askAI()">ASK AI</button>
+
+<div id="box"></div>
+
+<script>
+function askAI(){
+
+var q = document.getElementById("question").value.toLowerCase();
+var box = document.getElementById("box");
+
+// ⚡ 1. FAST MATH ENGINE
+if(/^[0-9+\-*/(). ]+$/.test(q)){
+    box.innerHTML = "📘 Answer: " + eval(q);
+    return;
+}
+
+// 📚 2. STUDY DATABASE (CLASS 6 + PRE-9)
+var data = [
+
+{
+keywords:["force"],
+answer:"📘 PHYSICS:\nClass 6: Force is a push or pull.\nPre-9: Force is interaction that changes motion (Newton laws)."
+},
+{
+keywords:["motion"],
+answer:"📘 PHYSICS:\nClass 6: Motion is movement of an object.\nPre-9: Motion includes speed, velocity and acceleration."
+},
+{
+keywords:["cell"],
+answer:"📘 BIOLOGY:\nClass 6: Cell is basic unit of life.\nPre-9: Cell contains nucleus, cytoplasm and organelles."
+},
+{
+keywords:["atom"],
+answer:"📘 CHEMISTRY:\nAtom is the smallest particle of matter."
+},
+{
+keywords:["molecule"],
+answer:"📘 CHEMISTRY:\nMolecules are made of two or more atoms."
+},
+{
+keywords:["photosynthesis"],
+answer:"📘 BIOLOGY:\nPlants make food using sunlight, water and carbon dioxide."
+},
+{
+keywords:["algebra"],
+answer:"📘 MATH:\nAlgebra uses letters and symbols to represent numbers."
+},
+{
+keywords:["grammar"],
+answer:"📘 ENGLISH:\nGrammar is rules of language, sentences and writing."
+},
+{
+keywords:["history"],
+answer:"📘 HISTORY:\nStudies past events, civilizations and empires."
+},
+{
+keywords:["science"],
+answer:"📘 SCIENCE:\nIt is about experiment,observation and fun."
+},
+{
+keywords:["planet"],
+answer:"📘 PLANET:\nIt is a large objet which orbits a star."
+},
+{
+keywords:["sun"],
+answer:"📘 Sun:\nIt is a big star which produces it's own light."
+},
+{
+keywords:["who are you"],
+answer:"ME:\nMY NAME IS NOVA AI AND I AM YOUR PERSONAL AI AND I AM GOING TO HELP YOU WITH YOUR QUESTIONS."
+},
+{
+keywords:["coding"],
+answer:"📘 CODING:\nCoding is the process of writing instruction that tell computer what to do."
+},
+{
+keywords:["Life prosecces"],
+answer:":\n1:Breating 2:Movement 3:Growth 4:Reproduction 5:Feeding 6:Using senses."
+},
+{
+keywords:["who created you"],
+answer:"📘 ME:\nMy creater is Hashir Hussain."
+},
+{
+keywords:["html java or css"],
+answer:"📘:\nIn my opinion these all are good."
+},
+{
+keywords:["math"],
+answer:"📘 MATH:\nIt is about numbers and calculations."
+},
+{
+keywords:["geography"],
+answer:"📘 GEOGRAPHY:\nStudies Earth, countries, maps and climate."
+},
+{
+keywords:["computer"],
+answer:"📘 COMPUTER:\nStudy of coding, software, hardware and technology."
+}
+
+];
+
+// ⚡ 3. STUDY SEARCH
+for(let i=0;i<data.length;i++){
+    for(let j=0;j<data[i].keywords.length;j++){
+        if(q.includes(data[i].keywords[j])){
+            box.innerHTML = data[i].answer;
+            return;
+        }
+    }
+}
+
+// ❌ 4. DEFAULT MESSAGE
+box.innerHTML = "❌ Please ask study-related questions.";
+
+}
+</script>
+
+<button
+style="
+position: fixed;
+bottom: 20px;
+right: 20px;
+padding: 10px 15px;
+border: none;
+border-radius: 20px;
+cursor: pointer;
+"
+onclick="
+if(document.body.style.background=='black'){
+    document.body.style.background='white';
+    document.body.style.color='black';
+}else{
+    document.body.style.background='black';
+    document.body.style.color='white';
+}
+">
+🌙 Dark Mode
+</button>
+<button onclick="document.getElementById('noteBox').style.display='block'"
+style="
+position: fixed;
+bottom: 20px;
+left: 20px;
+padding: 6px 10px;
+font-size: 12px;
+border: none;
+border-radius: 12px;
+background: #333;
+color: white;
+cursor: pointer;
+box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+">
+📝 Note
+</button>
+
+<div id="noteBox"
+style="
+display:none;
+position:fixed;
+top:50%;
+left:50%;
+transform:translate(-50%, -50%);
+background:white;
+color:black;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
+width:250px;
+text-align:center;
+z-index:999;
+">
+
+<p>CLICK REFRESH TO REMOVE THE SHOWING ANSWER OR DARK MODE OR OTHER ERRORS AND ALSO WRITE IN SMALL LETTERS ONLY</p>
+
+<button onclick="document.getElementById('noteBox').style.display='none'">
+Close
+</button>
+</body>
+</html>
